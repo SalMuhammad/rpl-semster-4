@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>halaman login</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="capitalize">
+  <div class="grid h-[100vh] place-items-center bg-slate-800 backdrop-blur-3xl">
+    <div class="layer overflow-hidde w-[600px] bg-zinc-400 h-auto">
+      <div class="relative h-full py-20 bg-purple-700 w-[60%] pl-4 float-right">
+        <p class="text-[.9em] absolute right-3 top-3">Sudah punya akun, register <a href="login.html">disini</a>.</p>
+
+        <h3 class="absolute font-bold text-xl text-teal-800 top-12">registrasi calon santri</h3>
+
+        <div class="wadah-form bg-green-700 w-full">
+          <form class="bg-red-700 w-full" action="">
+            <div class="flex justify-between w-[1000px] border-4 border-yellow-700">
+              <!-- !bagian data login -->
+              <div class="flex-1 bg-fuchsia-900 " id="data-login w-[100%]">
+                <div clas="w-full">
+                  <label class="text-white text-[.9em]" for="nama">Nama</label><br>
+                  <input class="w-full" type="text" id="nama">
+                </div>
+                <div clas="w-full">
+                  <label class="w-full text-white text-[.9em]" for="email">email</label> <br>
+                  <input class="w-full" type="email" id="email">
+                </div>
+                <div clas="w-full">
+                  <label class="w-full text-white text-[.9em]" for="password">password</label> <br>
+                  <input class="w-full" type="text" id="password">
+                </div>
+                <div clas="w-full">
+                  <label class="w-full text-white text-[.9em]" for="konfir-password">konfirmasi password</label> <br>
+                  <input class="w-full" type="text" id="konfir-password">
+                </div>
+              </div>
+
+              <!-- !identitas santri -->
+              <div class="bg-indigo-600 w-full flex-1" id="identitas-santri">
+                <div>
+                  <label class="w-full text-white text-[.9em]" for="no-hp">no hp/wa</label><br>
+                  <input type="text" id="no-hp" class="w-full">
+                </div>
+                <div>
+                  <label class="w-full text-white text-[.9em]" for="alamat">alamat lengkap</label> <br>
+                  <input class="w-full" type="alamat" id="alamat">
+                </div>
+                <div>
+                  <label class="w-full text-white text-[.9em]" for="ttl">tempat tanggal lahir</label> <br>
+                  <input class="w-full" type="text" id="ttl">
+                </div>
+                <div>
+                  <label class="w-full text-white text-[.9em]" for="jenis-kelamin">jenis kelamin</label> <br>
+                  <input class="w-full" type="text" id="jenis-kelamin">
+                </div>
+              </div>
+              <!-- !persyaratan -->
+              <div class="flex-1 bg-lime-600" id="persyaratan">
+                <div>
+                  <label class="w-full text-white text-[.9em]" for="photo-KK">mengunggah photo KK</label><br>
+                  <input type="file" id="photo-KK">
+                </div>
+                <div>
+                  <label class="w-full text-white text-[.9em]" for="alamat">alamat lengkap</label> <br>
+                  <input type="alamat" id="alamat">
+                </div>
+                
+              </div>
+            </div>
+
+            <button class="absolute bottom-4 right-48 bg-teal-700 text-white px-5 p-1 rounded font-medium " id="btn-register">Berikutnya</button>
+          </form>
+        </div>
+
+        
+      </div>
+    
+    </div>
+  </div>
+</body>
+
+</html>

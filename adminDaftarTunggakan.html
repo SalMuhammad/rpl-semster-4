@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      *{
+        --lebarLayar: 95%;
+        --warnaDasar: #008550;
+
+      }
+      tr:nth-child(2n) {
+        background-color: #00ff9986;
+      }
+      th, td {
+        padding: 3px 16px;
+      }
+    </style>
+</head>
+<body>
+  <main>
+    <div class="bg-[var(--warnaDasar)]">
+      <header class="p-4 flex justify-between items-center gap-3">
+        <div style="width: var(--lebarLayar);" class=" uppercase mx-auto flex justify-between items-center">
+          <div class="logo flex items-center ">
+            <div class="rounded-full h-10 w-10 bg-red-500"></div>
+            <p class="text-white pl-4 font-semibold">
+              Pondok Pesantren <br>Attaufiqurobi
+            </p>
+          </div>
+          <div class="">
+            <ul class="text-white flex">
+              <li class="mx-2"><a href="">admin</a></li>
+              <li class="mx-2"><a href="">daftar santri</a></li>
+              <li class="mx-2  font-bold"><a href="">tunggakan</a></li>
+              <li class="mx-2"><a href="">admin</a></li>
+            </div>
+            <i class="bi bi-arrow-bar-right text-white font-bold text-3xl cursor-pointer"></i>
+          </div>
+        </div>
+      </header>
+    </div>
+    
+    <!-- !bagian hero -->
+    <div class="flex">
+      <div id="sidebar" class="w-40 bg-[var(--warnaDasar)] p-2 h-[calc(100vh-90px)]">
+      </div>
+      
+      <!-- !bagain pencarian -->
+      <div class="container m-7">
+        <figure id="pencarian" class="rounded-lg overflow-hidden inline-block">
+          <i class="p-1 text-white bi bi-search bg-[var(--warnaDasar)]"></i><input type="text" class="border p-1 w-44">
+        </figure>
+
+        <!-- !fagination -->
+        <div id="pagination" class="text-cyan-900 cursor-pointer mt-5">
+          <i class="bi bi-chevron-left"></i>
+          <a href="">1</a>
+          <a href="" class="font-bold">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+          <a href="">...</a>
+          <i class="bi bi-chevron-right"></i>
+        </div>
+
+        <!-- !bagian tabel -->
+        <table class="mt-1" border="1" cellspacing="5" cellpadding="5">
+          <thead class="capitalize text-teal-800">
+            <tr class="bg-[var(--warnaDasar)] text-white">
+              <th>nama/photo</th>
+              <th>jumlah bulan nunggak</th>
+              <th>total</th>
+              <th>aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td class="text-white"><a href="" class="bg-teal-700 rounded-lg px-4">lihat</a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td class="text-white"><a href="" class="bg-teal-700 rounded-lg px-4">lihat</a></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td class="text-white"><a href="" class="bg-teal-700 rounded-lg px-4">lihat</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>
+

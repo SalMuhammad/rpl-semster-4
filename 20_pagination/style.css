@@ -1,0 +1,10 @@
+*{
+  --lebarLayar: 95%;
+  --warnaDasar: #008550;
+}
+tr:nth-child(2n) {
+  background-color: #00ff9986;
+}
+th, td {
+  padding: 3px 16px;
+}
