@@ -19,14 +19,16 @@
 <body>
   <main class="bg-[var(--warnaDasar)]">
     <header class="p-4 flex justify-between items-center gap-3">
-      <div style="width: var(--lebarLayar);" class=" uppercase mx-auto flex justify-between items-center">
+      <div class="fixed top-0 right-0 left-0 bg-[var(--warnaDasar)]">
+        
+        <div style="width: var(--lebarLayar);" class=" uppercase mx-auto flex justify-between items-center">
         <div class="logo flex items-center ">
           <div class="rounded-full h-10 w-10 bg-red-500"></div>
           <p class="text-white pl-4 font-semibold">
             Pondok Pesantren <br>Attaufiqurobi
           </p>
         </div>
-        <div class="">
+        <nav id="navbar" class="">
           <ul class="text-white flex">
             <li class="mx-2 font-bold"><a href="">beranda</a></li>
             <li class="mx-2"><a href="#sejarah">sejarah</a></li>
@@ -34,23 +36,23 @@
             <li class="mx-2"><a href="#kontak">kontak</a></li>
             <li class="mx-2"><a href="index.php">admin/santri</a></li>
           </ul>
-        </div>
-
+        </nav>
+        
         <?php
-      if (isset($_COOKIE['id']) && isset($_COOKIE['fr_aria'])) { ?>
-            <a href="logout.php">
-              <i class="text-white block text-center bi  bi-person-fill text-3xl"></i>
-              <i class="text-white block text-center bi  bi-box-arrow-right text-lg"></i>
-            </a>
-          <?php } else { ?>
-
-        <div class="login">
-          <a href="register.php" class="inline-block text-white">Daftar</a>
-          <a href="/20_pagination/index.php" class="inline-block border border-white px-4 py-2 rounded-md text-white">masuk</a>
+        if (isset($_COOKIE['id']) && isset($_COOKIE['fr_aria'])) { ?>
+              <a href="logout.php">
+                <i class="text-white block text-center bi  bi-person-fill text-3xl"></i>
+                <i class="text-white block text-center bi  bi-box-arrow-right text-lg"></i>
+              </a>
+              <?php } else { ?>
+                
+                <div class="login">
+                  <a href="register.php" class="inline-block text-white">Daftar</a>
+                  <a href="/20_pagination/index.php" class="inline-block border border-white px-4 py-2 rounded-md text-white">masuk</a>
+                </div>
+        <?php } ?>
         </div>
       </div>
-        <?php }
-            ?>
     </header>
     <div style="height: calc(100vh - 167px);" class="mx-auto h-[100vh -] w-[var(--lebarLayar)] text-white">
       <h3 class="mt-32 capitalize text-5xl font-bold">membantu temukan <br> jalan surga.</h3>
@@ -63,7 +65,7 @@
     </div>
 
   </main>
-  <section id="sejarah">
+  <section id="sejarah" class="pt-[70px]">
     <div class="w-[95%] mx-auto h-svh">
 
       <h3 class="text-center font-bold uppercase text-3xl my-2">sejarah</h3>
@@ -75,11 +77,11 @@
           omnis cum in harum, iure numquam quaerat?</p>
       </div>
     </div>
-    <section id="fasilitas" class="h-svh bg-teal-700 px">
+    <section id="fasilitas" class="h-svh bg-teal-700 pt-[70px]">
       <div class="w-[95%] mx-auto">
-        <div class="flex justify-between">
+        <div class="flex justify-between py-5 pt-7">
           <span class="text-white text-[1.4em] font-extrabold">Fasilitas</span>
-          <button class="bg-teal-500 px-4 py-1 rounded-md text-white">lihat semua</button>
+          <button class="bg-[var(warnaDasar)] px-4 py-1 rounded-md bg-white text-[var(--warnaDasar)] font-bold capitalize">lihat semua</button>
         </div>
 
         <div class="flex justify-between gap-2 h-32 items-stretch">
@@ -134,7 +136,17 @@
 </section>
 
 <script>
-  console.log(document.cookie);
+  const navbar = document.getElementById('navbar')
+  const links = [...document.querySelectorAll('ul li')]
+  
+  navbar.addEventListener('click', function(ygDiKlik) {
+    links.forEach(link => {
+      link.classList.remove('font-bold')
+      ygDiKlik.target.classList.add('font-bold')
+    })
+  })
+
+  alert('coba')
 </script>
 </body>
 

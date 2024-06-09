@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Contoh Sticky Position</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  header {
+    background-color: #f8f9fa;
+    padding: 10px 20px;
+    text-align: center;
+  }
+  .sticky {
+    position: -webkit-sticky; /* Untuk Safari */
+    position: sticky;
+    top: 0; /* Jarak elemen dari atas viewport saat menjadi sticky */
+    background-color: yellow;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  section {
+    padding: 15px;
+    height: 500px; /* Tinggi setiap bagian untuk efek scroll yang lebih jelas */
+    border: 1px solid #ccc;
+    margin-top: 10px;
+  }
+</style>
+</head>
+<body>
+
+<header>Header Tidak Sticky</header>
+<div class="sticky">Menu Navigasi Sticky</div>
+<section>Bagian 1</section>
+<section>Bagian 2</section>
+<section>Bagian 3</section>
+
+</body>
+</html>
