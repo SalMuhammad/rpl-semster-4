@@ -32,23 +32,32 @@
             <li class="mx-2"><a href="#sejarah">sejarah</a></li>
             <li class="mx-2"><a href="#fasilitas">fasilitas</a></li>
             <li class="mx-2"><a href="#kontak">kontak</a></li>
-            <li class="mx-2"><a href="">admin/santri</a></li>
+            <li class="mx-2"><a href="index.php">admin/santri</a></li>
           </ul>
         </div>
+
+        <?php
+      if (isset($_COOKIE['id']) && isset($_COOKIE['fr_aria'])) { ?>
+            <a href="logout.php">
+              <i class="text-white block text-center bi  bi-person-fill text-3xl"></i>
+              <i class="text-white block text-center bi  bi-box-arrow-right text-lg"></i>
+            </a>
+          <?php } else { ?>
+
         <div class="login">
-          <a href="20_pagination/register.php" class="inline-block text-white">Daftar</a>
-          <a href="/20_pagination/index.php"
-            class="inline-block border border-white px-4 py-2 rounded-md text-white">masuk</a>
+          <a href="register.php" class="inline-block text-white">Daftar</a>
+          <a href="/20_pagination/index.php" class="inline-block border border-white px-4 py-2 rounded-md text-white">masuk</a>
         </div>
       </div>
-
+        <?php }
+            ?>
     </header>
     <div style="height: calc(100vh - 167px);" class="mx-auto h-[100vh -] w-[var(--lebarLayar)] text-white">
       <h3 class="mt-32 capitalize text-5xl font-bold">membantu temukan <br> jalan surga.</h3>
       <p style="line-height: 1.4;" class="mt-3 text-lg w-96">Attaufiqu robi hadir untuk sebagai rumah sendiri
         dalam perjalanan menuju keridoanNya.
         menjadi tameng gempuran modern</p>
-      <a href="20_pagination/register.php" class="inline-block capitalize mt-9 p-3 font-bold rounded-sm bg-white text-[var(--warnaDasar)]">daftar
+      <a href="register.php" class="inline-block capitalize mt-9 p-3 font-bold rounded-sm bg-white text-[var(--warnaDasar)]">daftar
         sekarang</a>
       <i class="bi bi-chevron-compact-right font-bold text-3xl"></i>
     </div>
@@ -92,28 +101,27 @@
     <div class="flex-1">
       <h3 class="font-bold uppercase text-1xl text-white">butuh konsultasi ...?, <br> silahkan kontak kami <br> siap
         membantu</h3>
-        <div class="text-white mt-5 mb-2 font-bold uppercase">kontak</div>
+      <div class="text-white mt-5 mb-2 font-bold uppercase">kontak</div>
 
-        <div class="flex gap-2 text-white">
-          <i class="bi bi-geo-alt-fill"></i>
-          <div class="konten">jalan pelajaran perjuangan</div>
-        </div>
-        <div class="flex gap-2 text-white">
-          <i class="bi bi-person-lines-fill"></i>
-          <div class="konten">083734763234</div>
-        </div>
-        <div class="flex gap-2 text-white">
-          <i class="bi bi-envelope-at-fill"></i>
-          <div class="konten">Attaufiqurobi@gmail.com</div>
-        </div>
+      <div class="flex gap-2 text-white">
+        <i class="bi bi-geo-alt-fill"></i>
+        <div class="konten">jalan pelajaran perjuangan</div>
+      </div>
+      <div class="flex gap-2 text-white">
+        <i class="bi bi-person-lines-fill"></i>
+        <div class="konten">083734763234</div>
+      </div>
+      <div class="flex gap-2 text-white">
+        <i class="bi bi-envelope-at-fill"></i>
+        <div class="konten">Attaufiqurobi@gmail.com</div>
+      </div>
     </div>
-      
+
     <div class="flex justify-between gap-2 flex-1 text-teal-700">
       <div class="p-4 bg-red-50 flex-1 h-48">
-      <h3 class="font-bold uppercase text-center mb-3 text-1xl ">Ada Pertanyaan?</h3>
+        <h3 class="font-bold uppercase text-center mb-3 text-1xl ">Ada Pertanyaan?</h3>
         <form action="">
-          <label for="email" class=" mt-4"
-            <input id="email" class="p-1 rounded-sm w-full bg-gray-300" type="email" placeholder="masukan email anda disini">
+          <label for="email" class=" mt-4" <input id="email" class="p-1 rounded-sm w-full bg-gray-300" type="email" placeholder="masukan email anda disini">
           </label>
           <label for="pertanyaan" class="mx-4">
             <input id="pertanyaan" class="p-1 rounded-sm w-full bg-gray-300" type="email" placeholder="masukan pertanyaan anda ..">
@@ -124,5 +132,10 @@
     </div>
   </div>
 </section>
+
+<script>
+  console.log(document.cookie);
+</script>
+</body>
 
 </html>

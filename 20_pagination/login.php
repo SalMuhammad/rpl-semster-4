@@ -54,8 +54,11 @@ if (isset($_POST["login"])) {
       if (password_verify($pass, $rows["password"])) {
         // cek apakah remember di centang?
         if (isset($_POST["remember"])) {
-          setcookie('id', $rows['id'], time() + 31622400);
-          setcookie('fr_aria', hash('sha256', $rows['username']), time() + 31622400);
+          
+          // setcookie("username", "JohnDoe", time() + 3600, "/", "", false, false);
+
+          setcookie('id', $rows['id'], time() + 31622400, "/", "", false, false);
+          setcookie('fr_aria', hash('sha256', $rows['username']), time() + 31622400, "", false, false);
         }
         $_SESSION["login"] = true;
         header('Location: index.php');

@@ -55,7 +55,7 @@ if(isset($_POST["register"])) {
                   <input class="w-full" type="email" id="email">
                 </div>
                 <div clas="w-full">
-                  <label class="w-full text-white text-[.9em]" for="password">password</label> <br>
+                  <label class="w-full text-white text-[.9em]" for="password">password</label><br>
                   <input class="w-full" type="text" id="password">
                 </div>
                 <div clas="w-full">
@@ -63,7 +63,6 @@ if(isset($_POST["register"])) {
                   <input class="w-full" type="text" id="konfir-password">
                 </div>
               </div>
-
               <!-- !identitas santri -->
               <div style="width: calc(this + 50px)" class="bg-indigo-60 w-full flex-1" id="identitas-santri">
                 <div>
@@ -93,11 +92,11 @@ if(isset($_POST["register"])) {
                   <label class="w-full text-white text-[.9em]" for="alamat">alamat lengkap</label> <br>
                   <input type="alamat" id="alamat">
                 </div>
-                
               </div>
             </div>
 
-            <button class="btn absolute bottom-4 right-48 bg-teal-700 text-white px-5 p-1 rounded font-medium " id="btn-register">Berikutnya</button>
+            <button class="absolute bottom-4 right-130px] bg-teal-700 text-white px-5 p-1 rounded font-medium hidden" id="btn-sebelumnya">Berikutnya</button>
+            <button class="btn absolute bottom-4 right-[25px] bg-teal-700 text-white px-5 p-1 rounded font-medium " id="btn-register">Berikutnya</button>
           </form>
         </div>
 

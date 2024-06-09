@@ -68,7 +68,7 @@ if (isset($_POST["cari"])) {
           </div>
           <div class="">
             <ul class="text-white flex">
-              <li class="mx-2"><a href="../index.html">home</a></li>
+              <li class="mx-2"><a href="beranda.php">home</a></li>
               <li class="mx-2 "><a href="index.php">daftar santri</a></li>
               <li class="mx-2 font-bold"><a href="tunggakan.php">tunggakan</a></li>
           </div>
